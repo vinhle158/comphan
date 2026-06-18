@@ -423,7 +423,6 @@ zaloLinkEl.addEventListener('click', (e) => {
             const hotline = currentConfig.hotline || '0987785876';
             window.location.href = `https://zalo.me/${hotline}`;
         });
-        });
     }
 });
 
