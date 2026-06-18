@@ -412,13 +412,14 @@ zaloLinkEl.addEventListener('click', (e) => {
         navigator.clipboard.writeText(msgText).then(() => {
             showToast();
             const hotline = currentConfig.hotline || '0987785876';
+            // Use a shorter delay and location.href to avoid popup blockers
             setTimeout(() => {
-                window.open(`https://zalo.me/${hotline}`, "_blank");
-            }, 2000);
+                window.location.href = `https://zalo.me/${hotline}`;
+            }, 1200);
         }).catch(err => {
             console.error("Failed to copy text: ", err);
             const hotline = currentConfig.hotline || '0987785876';
-            window.open(`https://zalo.me/${hotline}`, "_blank");
+            window.location.href = `https://zalo.me/${hotline}`;
         });
     }
 });
