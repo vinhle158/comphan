@@ -1,7 +1,7 @@
 const STORE_CONFIG = {
     "storeName": "CƠM PHẦN HƯƠNG QUÊ",
     "hotline": "0987785876",
-    "priceValue": "40.000",
+    "priceValue": "35.000",
     "priceUnit": "/ Phần (3 Món)",
     "deliveryHours": "10:00 - 16:00 (Mõi ngày)",
     "deliveryPolicy": "Freeship bán kính 1km cho đơn từ 2 phần.",
