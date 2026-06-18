@@ -412,9 +412,11 @@ zaloLinkEl.addEventListener('click', (e) => {
         navigator.clipboard.writeText(msgText).then(() => {
             showToast();
             const hotline = currentConfig.hotline || '0987785876';
-            // Use a shorter delay and location.href to avoid popup blockers
+            
+            // On mobile, try deep linking to Zalo app, otherwise use standard link
             setTimeout(() => {
-                window.location.href = `https://zalo.me/${hotline}`;
+                const zaloUrl = `https://zalo.me/${hotline}`;
+                window.location.href = zaloUrl;
             }, 1200);
         }).catch(err => {
             console.error("Failed to copy text: ", err);
