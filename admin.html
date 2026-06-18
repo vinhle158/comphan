@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Trị Thực Đơn Cơm Trưa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div class="login-overlay" id="login-overlay">
+        <div class="login-card">
+            <div class="login-logo">🔑</div>
+            <h2>Quản Trị Thực Đơn</h2>
+            <p>Vui lòng nhập mật khẩu quản lý để chỉnh sửa cài đặt và thực đơn cơm trưa.</p>
+            <form id="login-form">
+                <input type="password" id="password-input" placeholder="Nhập mật khẩu (Mặc định: admin123)" required>
+                <button type="submit">Đăng Nhập</button>
+            </form>
+            <a href="index.html" class="back-link">← Quay lại trang thực đơn</a>
+        </div>
+    </div>
+
+    <!-- Main Admin Dashboard -->
+    <div class="admin-container hidden" id="admin-dashboard">
+        <header class="admin-header">
+            <div>
+                <h1>⚙️ Trang Quản Trị Cửa Hàng</h1>
+                <p>Điều chỉnh tên quán, hotline, giá bán, chính sách giao hàng và thực đơn.</p>
+            </div>
+            <button class="logout-btn" id="logout-btn">Đăng xuất</button>
+        </header>
+
+        <form id="config-form" class="config-grid">
+            <!-- Left Column: Store general details -->
+            <div class="admin-card">
+                <h2>Cấu Hình Chung</h2>
+                <div class="form-group">
+                    <label for="store-name">Tên Quán</label>
+                    <input type="text" id="store-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="hotline">Số Điện Thoại Nhận Đơn</label>
+                    <input type="text" id="hotline" required placeholder="Ví dụ: 0987785876">
+                </div>
+                <div class="form-row">
+                    <div class="form-group flex-2">
+                        <label for="price-value">Đơn Giá Cơm</label>
+                        <input type="text" id="price-value" required placeholder="Ví dụ: 35.000">
+                    </div>
+                    <div class="form-group flex-3">
+                        <label for="price-unit">Đơn Vị Giá</label>
+                        <input type="text" id="price-unit" required placeholder="Ví dụ: / Phần (3 Món)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-hours">Giờ Giao Cơm</label>
+                    <input type="text" id="delivery-hours" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-policy">Chính Sách Giao Hàng</label>
+                    <textarea id="delivery-policy" rows="3" required></textarea>
+                </div>
+            </div>
+
+            <!-- Right Column: Menu editor -->
+            <div class="admin-card">
+                <h2>Chỉnh Sửa Thực Đơn</h2>
+                <p class="card-subtitle">Chọn ngày để chỉnh sửa danh sách các món ăn tương ứng.</p>
+
+                <!-- Tabs -->
+                <nav class="admin-tabs">
+                    <button type="button" class="tab-btn active" data-day="1">Thứ 2</button>
+                    <button type="button" class="tab-btn" data-day="2">Thứ 3</button>
+                    <button type="button" class="tab-btn" data-day="3">Thứ 4</button>
+                    <button type="button" class="tab-btn" data-day="4">Thứ 5</button>
+                    <button type="button" class="tab-btn" data-day="5">Thứ 6</button>
+                    <button type="button" class="tab-btn" data-day="6">Thứ 7</button>
+                    <button type="button" class="tab-btn" data-day="0">Chủ Nhật</button>
+                </nav>
+
+                <!-- Dishes Inputs -->
+                <div class="menu-editor-fields">
+                    <div class="form-group">
+                        <label for="mon-man-input" id="mon-man-label">Món Mặn (Mỗi món viết 1 dòng)</label>
+                        <textarea id="mon-man-input" rows="6" placeholder="Ví dụ:&#10;Thịt kho tiêu&#10;Vịt ram gừng"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group flex-1">
+                            <label for="mon-canh-input">Món Canh (Mỗi món 1 dòng)</label>
+                            <textarea id="mon-canh-input" rows="4" placeholder="Ví dụ:&#10;Canh khoai mỡ&#10;Canh chua cá basa"></textarea>
+                        </div>
+                        <div class="form-group flex-1">
+                            <label for="mon-xao-input">Món Xào (Mỗi món 1 dòng)</label>
+                            <textarea id="mon-xao-input" rows="4" placeholder="Ví dụ:&#10;Đậu đũa xào&#10;Đậu bắp luộc"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mon-goi-them-input">Món Gọi Thêm (Định dạng: Tên món : Giá - Mỗi món 1 dòng)</label>
+                        <textarea id="mon-goi-them-input" rows="3" placeholder="Ví dụ:&#10;Canh khổ qua dồn thịt: 35K&#10;Mắm chưng: 35K"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Action Buttons Bar -->
+        <footer class="admin-actions-bar">
+            <a href="index.html" class="home-btn">← Về trang chủ</a>
+            <button type="button" id="save-btn" class="save-btn">💾 Lưu Tất Cả Thay Đổi</button>
+        </footer>
+    </div>
+
+    <!-- Admin Toast Notification -->
+    <div class="admin-toast" id="admin-toast">
+        <div class="toast-content">
+            <span class="toast-icon" id="toast-icon">💾</span>
+            <span class="toast-text" id="toast-text">Lưu cấu hình thành công!</span>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

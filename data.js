@@ -1,0 +1,258 @@
+const STORE_CONFIG = {
+    "storeName": "CƠM PHẦN HƯƠNG QUÊ",
+    "hotline": "0987785876",
+    "priceValue": "40.000",
+    "priceUnit": "/ Phần (3 Món)",
+    "deliveryHours": "10:00 - 16:00 (Mõi ngày)",
+    "deliveryPolicy": "Freeship bán kính 1km cho đơn từ 2 phần.",
+    "menus": {
+        "0": {
+            "man": [
+                "Thịt kho tiêu",
+                "Vịt ram gừng",
+                "Cá ba sa kho",
+                "Cá biển muối chiên",
+                "Chả cá chiên",
+                "Cá lóc kho tiêu",
+                "Lươn xào xả ớt",
+                "Gà ram mặn"
+            ],
+            "canh": [
+                "Canh mướp mồng tơi thịt bằm",
+                "Canh chua cá basa"
+            ],
+            "xao": [
+                "Trái xu xào tỏi"
+            ],
+            "goithem": [
+                {
+                    "name": "Canh khổ qua dồn thịt",
+                    "price": "35K"
+                },
+                {
+                    "name": "Mắm chưng",
+                    "price": "35K"
+                },
+                {
+                    "name": "Thịt kho hột vịt",
+                    "price": "35K"
+                }
+            ]
+        },
+        "1": {
+            "man": [
+                "Thịt kho tiêu",
+                "Vịt ram gừng",
+                "Cá lóc kho tiêu",
+                "Cá ba sa kho",
+                "Cá trê chiên mắm gừng",
+                "Cá rô kho tộ",
+                "Ếch xào sả nghệ",
+                "Tép gam mặn",
+                "Trứng luộc hồng đào",
+                "Cá ngừ kho",
+                "Bo ne xao bong cai"
+            ],
+            "canh": [
+                "Canh khoai mỡ",
+                "Canh chua cá basa"
+            ],
+            "xao": [
+                "Đậu đũa xào",
+                "Đậu bắp luộc"
+            ],
+            "goithem": [
+                {
+                    "name": "Canh khổ qua dồn thịt",
+                    "price": "35K"
+                },
+                {
+                    "name": "Mắm chưng",
+                    "price": "35K"
+                },
+                {
+                    "name": "Thịt kho hột vịt",
+                    "price": "35K"
+                }
+            ]
+        },
+        "2": {
+            "man": [
+                "Thịt kho tiêu",
+                "Vịt ram gừng",
+                "Cá trê chiên tươi mắm gừng",
+                "Cá biển muối chiên",
+                "Đậu hũ dồn thịt sốt cà",
+                "Cá basa kho",
+                "Cá ngừ kho",
+                "Cá lóc kho",
+                "Sườn xào chua ngọt",
+                "Cá điêu hồng sốt cà"
+            ],
+            "canh": [
+                "Canh bầu thịt bằm",
+                "Canh chua cá lóc"
+            ],
+            "xao": [
+                "Bắp cải xào tỏi",
+                "Rau muống xào tỏi"
+            ],
+            "goithem": [
+                {
+                    "name": "Canh khổ qua dồn thịt",
+                    "price": "35K"
+                },
+                {
+                    "name": "Mắm chưng",
+                    "price": "35K"
+                },
+                {
+                    "name": "Thịt kho hột vịt",
+                    "price": "35K"
+                }
+            ]
+        },
+        "3": {
+            "man": [
+                "Thịt kho tiêu",
+                "Vịt ram gừng",
+                "Cá lóc kho tiêu",
+                "Cá trê chiên mắm gừng",
+                "Ếch xào sả nghệ",
+                "Tép ram mặn",
+                "Cá rô kho",
+                "Cá ba sa kho lạt",
+                "Cá đối kho lạt"
+            ],
+            "canh": [
+                "Canh bí rợ thịt bằm",
+                "Canh chua cá basa"
+            ],
+            "xao": [
+                "Đậu que xào tỏi",
+                "Bắp cải trắng xào tỏi"
+            ],
+            "goithem": [
+                {
+                    "name": "Canh khổ qua dồn thịt",
+                    "price": "35K"
+                },
+                {
+                    "name": "Mắm chưng",
+                    "price": "35K"
+                },
+                {
+                    "name": "Thịt kho hột vịt",
+                    "price": "35K"
+                }
+            ]
+        },
+        "4": {
+            "man": [
+                "Thịt kho tiêu",
+                "Vịt ram gừng",
+                "Cá lóc kho tiêu",
+                "Gà kho sả",
+                "Cá trê chiên mắm gừng",
+                "Ba rọi xào mắm ruốc",
+                "Cá ba sa kho",
+                "Ếch xào sả nghệ",
+                "Cá ngừ kho",
+                "Sườn ram mặn"
+            ],
+            "canh": [
+                "Canh rong biển",
+                "Canh chua cá basa"
+            ],
+            "xao": [
+                "Rau muống xào tỏi",
+                "Đậu bắp luộc"
+            ],
+            "goithem": [
+                {
+                    "name": "Canh khổ qua dồn thịt",
+                    "price": "35K"
+                },
+                {
+                    "name": "Mắm chưng",
+                    "price": "35K"
+                },
+                {
+                    "name": "Thịt kho hột vịt",
+                    "price": "35K"
+                }
+            ]
+        },
+        "5": {
+            "man": [
+                "Thịt kho tiêu",
+                "Vịt ram gừng",
+                "Cá biển chiên tươi",
+                "Cá lóc kho tiêu",
+                "Cá ngừ kho",
+                "Cá ba thú kho",
+                "Gà kho xả ớt",
+                "Tép ram mặn",
+                "Trứng vịt luộc lòng đào",
+                "Cá trê chiên"
+            ],
+            "canh": [
+                "Canh chua cá basa",
+                "Canh rau dền thịt bằm"
+            ],
+            "xao": [
+                "Đậu que xào tỏi",
+                "Bắp cải trắng xào tỏi"
+            ],
+            "goithem": [
+                {
+                    "name": "Canh khổ qua dồn thịt",
+                    "price": "35K"
+                },
+                {
+                    "name": "Mắm chưng",
+                    "price": "35K"
+                },
+                {
+                    "name": "Thịt kho hột vịt",
+                    "price": "35K"
+                }
+            ]
+        },
+        "6": {
+            "man": [
+                "Thịt kho tiêu",
+                "Vịt ram gừng",
+                "Cá lóc kho tiêu",
+                "Mắm chưng/chèn (kèm rau)",
+                "Cá trê chiên tươi mắm gừng",
+                "Cá ngừ kho",
+                "Cá biển muối chiên",
+                "Đậu hũ dồn thịt sốt cà",
+                "Cá basa kho",
+                "Sườn ram"
+            ],
+            "canh": [
+                "Canh cải ngọt thịt bằm",
+                "Canh chua cá lóc"
+            ],
+            "xao": [
+                "Bắp cải xào tỏi"
+            ],
+            "goithem": [
+                {
+                    "name": "Canh khổ qua dồn thịt",
+                    "price": "35K"
+                },
+                {
+                    "name": "Mắm chưng",
+                    "price": "35K"
+                },
+                {
+                    "name": "Thịt kho hột vịt",
+                    "price": "35K"
+                }
+            ]
+        }
+    }
+};
